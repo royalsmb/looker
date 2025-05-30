@@ -25,7 +25,7 @@ def get_schema(title=None):
     
     try:
         # Get the report configuration
-        report = frappe.get_doc("Looker Studio Report", {"title": title})
+        report = frappe.get_doc("Looker Studio Report", title)
         
         if not report.published:
             return {"error": "Report is not published"}
@@ -89,7 +89,7 @@ def get_data(title=None, params=None):
             params = json.loads(params)
         
         # Get the report configuration
-        report = frappe.get_doc("Looker Studio Report", {"title": title})
+        report = frappe.get_doc("Looker Studio Report", title)
         
         if not report.published:
             return {"error": "Report is not published"}

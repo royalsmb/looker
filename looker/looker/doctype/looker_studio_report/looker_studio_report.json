@@ -1,37 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2025-05-30 03:31:28.567494",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "title",
   "reference_doctype",
+  "column_break_ulqy",
   "published",
   "section_break_1",
   "export_fields"
  ],
  "fields": [
   {
+   "description": "The name of the export configuration",
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
    "reqd": 1,
-   "description": "The name of the export configuration"
+   "unique": 1
   },
   {
+   "description": "The ERPNext Doctype to export data from",
    "fieldname": "reference_doctype",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Reference Doctype",
    "options": "DocType",
-   "reqd": 1,
-   "description": "The ERPNext Doctype to export data from"
+   "reqd": 1
   },
   {
+   "default": "0",
+   "description": "Used to mark the export config as active or inactive",
    "fieldname": "published",
    "fieldtype": "Check",
-   "label": "Published",
-   "description": "Used to mark the export config as active or inactive"
+   "label": "Published"
   },
   {
    "fieldname": "section_break_1",
@@ -43,15 +49,20 @@
    "fieldtype": "Table",
    "label": "Export Fields",
    "options": "Looker Studio Report Field"
+  },
+  {
+   "fieldname": "column_break_ulqy",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-30 03:31:28.567494",
+ "modified": "2025-05-30 04:31:55.674409",
  "modified_by": "Administrator",
  "module": "Looker",
  "name": "Looker Studio Report",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
