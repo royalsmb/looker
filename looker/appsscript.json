@@ -1,0 +1,25 @@
+{
+  "timeZone": "Etc/GMT",
+  "dependencies": {
+    "enabledAdvancedServices": []
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dataStudio": {
+    "name": "Frappe Looker Studio Connector",
+    "logoUrl": "https://frappe.io/files/frappe.png",
+    "company": "Frappe Technologies",
+    "companyUrl": "https://frappe.io",
+    "addonUrl": "https://github.com/frappe/looker-connector",
+    "supportUrl": "https://discuss.frappe.io",
+    "description": "Connect Google Looker Studio to your Frappe application to visualize your data.",
+    "sources": ["FRAPPE"]
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "urlFetchWhitelist": [
+    "https://*.erpera.io/",
+    "https://*.frappe.cloud/"
+  ]
+}
